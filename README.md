@@ -29,11 +29,11 @@ Once this command is issued, the folowing steps are followed:
 The following configuration parameters are required. The config.py file included in this repo cotains dummy credentials for illustration
 * KEY  - Meraki Dashboard API key
 * ORG  - Meraki Org
-* GCP_CredentialFile - Google Credential file in .json
-* GCP_storageProject
-* GCP_storageProjectFile
-* GCP_location
-* ANOMALYRATING - Number of Standard Deviations required to indicate an anomaly to be alerted
+* GCP_CredentialFile - Part of the GCP service account key file (see below)
+* GCP_storageProject - Part of the GCP service account key file (see below)
+* GCP_storageProjectFile - Part of the GCP service account key file (see below)
+* GCP_location - GCP Data Center Geo
+* ANOMALYRATING - Number of Standard Deviations from the expected value required to indicate an anomaly to be alerted
 * WBXRoomID - The room ID to send anomaly alerts
 * WBXAuth - Webex Space Authentication Key
 <br>
@@ -58,6 +58,9 @@ PROJECT_ID="project id here" \
 \
 gcurl -X DELETE https://timeseriesinsights.googleapis.com/v1/projects/${PROJECT_ID}/datasets/**dataset_name** \
 gcurl https://timeseriesinsights.googleapis.com/v1/projects/${PROJECT_ID}/datasets \
+
+These commands require the gcloud CLI be downloaded and installed locally as described here: \
+https://cloud.google.com/sdk/gcloud
 
 # Resources
 ## Timeseries Insights API tutorial
