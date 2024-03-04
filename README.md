@@ -26,6 +26,7 @@ Once this command is issued, the folowing steps are followed:
 
 
 # Configuration
+The following configuration parameters are required. The config.py file included in this repo cotains dummy credentials for illustration
 * KEY  - Meraki Dashboard API key
 * ORG  - Meraki Org
 * GCP_CredentialFile - Google Credential file in .json
