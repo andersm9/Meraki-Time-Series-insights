@@ -36,6 +36,10 @@ The following configuration parameters are required. The config.py file included
 * ANOMALYRATING - Number of Standard Deviations required to indicate an anomaly to be alerted
 * WBXRoomID - The room ID to send anomaly alerts
 * WBXAuth - Webex Space Authentication Key
+<br>
+
+The project uses a **GCP Service Account** and an associated service account key file, as described here: \
+https://cloud.google.com/iam/docs/keys-create-delete
 
 # Requirements
 Tested using: \
