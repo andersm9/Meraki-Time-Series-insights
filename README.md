@@ -17,12 +17,13 @@ Once this command is issued, the folowing steps are followed:
 <br>
 1. User is prompted to provide a timescale (measured in days) of the number of days of historic data that should be used as a basis for anomaly detection
 2. The given number of days worth of data is downloaded from the Meraki Platform (this may take several minuted depending ont he quantity of data requested)
-3. The raw data is processed into a format required by GCP's Timeseries Insights
-4. The processed data is uploaded to Google Cloud Storage
-5. The stored data is used to create a dataset withi Timeseries Insights. One dataset is created for each Temperature sensor detected in stage 1)
-6. The Meraki Dashboard API is periodically queried for the latest Temperature readings across the range of Temperature Sensors found. This reading is appended to the previously created dataset for that Temperature Sensor
-7. The temperature sensor reading is evaluated against the dataset for anomaly. An Anomaly is registered if the lastest reading is 4 standard deviations from the expected reading at that point in time
-8. In the event of an anomaly being detected, a message is sent to the Webex Space configured in config.py
+3. Data relating to the MT Temperature Sensors is taken from 
+4. Data relating to the MT Temperature Sensors is taken from the raw data and is processed into a format required by GCP's Timeseries Insights
+5. The processed data is uploaded to Google Cloud Storage
+6. The stored data is used to create a dataset withi Timeseries Insights. One dataset is created for each Temperature sensor detected in stage 1)
+7. The Meraki Dashboard API is periodically queried for the latest Temperature readings across the range of Temperature Sensors found. This reading is appended to the previously created dataset for that Temperature Sensor
+8. The temperature sensor reading is evaluated against the dataset for anomaly. An Anomaly is registered if the lastest reading is 4 standard deviations from the expected reading at that point in time
+9. In the event of an anomaly being detected, a message is sent to the Webex Space configured in config.py
 
 
 # Configuration
