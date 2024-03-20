@@ -1,7 +1,7 @@
 KEY = '987234785hufheirf94378y4937yrrjshbdfgvj'
 ORG = 'abc123'
 GCP_CredentialFile = 'project-name-300513-bhsd123456.json'
-GCP_storageProject = "meraki-sales-syseng-production_cloudbuild"
+GCP_storageProject = "project-file-name-here_cloudbuild"
 GCP_storageProjectFile = "timeseries_AI"
 GCP_location = "us-central1"
 ANOMALYRATING = "2"
